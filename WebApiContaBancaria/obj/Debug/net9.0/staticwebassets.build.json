@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "nIm0ilQDHuMnTgZD6rWt2SgC0GauPgvQSgfZ9ZhbjcY=",
+  "Source": "WebApiContaBancaria",
+  "BasePath": "_content/WebApiContaBancaria",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
