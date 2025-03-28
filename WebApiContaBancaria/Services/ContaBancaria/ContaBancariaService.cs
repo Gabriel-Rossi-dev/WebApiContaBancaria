@@ -79,7 +79,7 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
             };
         }
 
-        public async Task<ResponseModel<List<ContaBancariaResponse>>> CriarContaBancaria(ContaBancariaCreateRequest contaBancariaCreateRequest) {
+        public async Task<ResponseModel<ContaBancariaResponse>> CriarContaBancaria(ContaBancariaCreateRequest contaBancariaCreateRequest) {
 
 
             //aqui 
@@ -93,7 +93,7 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
             //O CNPJ será um registro UNICO, não podendo ser repetido.
 
 
-            ResponseModel<List<ContaBancariaResponse>> resposta = new ResponseModel<List<ContaBancariaResponse>>();
+            ResponseModel<ContaBancariaResponse> resposta = new ResponseModel<ContaBancariaResponse>();
             ContaCreateRequestToContaModel contaCreateRequestToContaModel = new ContaCreateRequestToContaModel();
             ContaBancariaModelToContaResponse contabancariaModelToContaResponse = new ContaBancariaModelToContaResponse();
 
@@ -117,9 +117,10 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
 
                 _context.Add(contaBancariaModel);
                 await _context.SaveChangesAsync();
-                var contas = await _context.ContasBancarias.Where(contaBancariaModel => contaBancariaModel.Ativo).ToListAsync();
 
-                var contasResponse = contas.Select(conta => contabancariaModelToContaResponse.Convert(conta)).ToList();
+                var contas = await _context.ContasBancarias.Where(contas => contas.Ativo).ToListAsync();
+
+                var contasResponse = contabancariaModelToContaResponse.Convert(conta);
 
 
                 resposta.Dados = contasResponse;
@@ -180,10 +181,10 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
             }
         }
 
-        public async Task<ResponseModel<List<ContaBancariaResponse>>> ApagarContaBancaria(int id) {
+        public async Task<ResponseModel<ContaBancariaResponse>> ApagarContaBancaria(int id) {
 
 
-            ResponseModel<List<ContaBancariaResponse>> resposta = new ResponseModel<List<ContaBancariaResponse>>();
+            ResponseModel<ContaBancariaResponse> resposta = new ResponseModel<ContaBancariaResponse>();
             ContaBancariaModelToContaResponse contabancariaModelToContaResponse = new ContaBancariaModelToContaResponse();
 
 
@@ -199,9 +200,10 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
                 _context.Update(conta);
                 await _context.SaveChangesAsync();
 
+
                 var contasBancarias = await _context.ContasBancarias.Where(contas => contas.Ativo).ToListAsync();
 
-                var contasResponse = contasBancarias.Select(conta => contabancariaModelToContaResponse.Convert(conta)).ToList();
+                var contasResponse = contabancariaModelToContaResponse.Convert(conta);
 
                 resposta.Dados = contasResponse;
                 resposta.Mensagem = "Conta apagada com sucesso!";
