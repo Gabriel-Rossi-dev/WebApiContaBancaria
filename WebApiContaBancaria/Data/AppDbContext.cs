@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebApiContaBancaria.Models.ContaBancaria;
+using WebApiContaBancaria.Models.ContaBancariaModel;
 using WebApiContaBancaria.Models.Transacoes;
 
 namespace WebApiContaBancaria.Data {
@@ -9,7 +9,7 @@ namespace WebApiContaBancaria.Data {
             
         }
 
-        public DbSet<ContaBancaria> ContaBancarias { get; set; }
-        public DbSet<Transacoes> Transacoes { get; set; }
+        public DbSet<ContaBancariaModel> ContasBancarias { get; set; }
+        public DbSet<TransacoesModel> Transacoes { get; set; }
     }
 }

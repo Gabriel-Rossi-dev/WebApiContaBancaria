@@ -725,7 +725,7 @@
           }
         }
       },
-      "Scalar.AspNetCore/2.1.1": {
+      "Scalar.AspNetCore/2.1.2": {
         "type": "package",
         "compile": {
           "lib/net9.0/Scalar.AspNetCore.dll": {
@@ -2496,10 +2496,10 @@
         "postgresql.png"
       ]
     },
-    "Scalar.AspNetCore/2.1.1": {
-      "sha512": "7Z0O9oQ7N/O2nkruLFjr4JJe8GN0SlXsMePdsjTfC9fzTaK6u8al44n1veTQxfLtLhVMIMixqNRhIKBl7swBFw==",
+    "Scalar.AspNetCore/2.1.2": {
+      "sha512": "6F1xr+isEdUjwQ98MIOQbvVR2ru5YiHEuXDS5DMTAVweSLji9ejWQQJViGOWqB56fH+GktLuDAq2ifZF4gDMHw==",
       "type": "package",
-      "path": "scalar.aspnetcore/2.1.1",
+      "path": "scalar.aspnetcore/2.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2509,7 +2509,7 @@
         "lib/net8.0/Scalar.AspNetCore.xml",
         "lib/net9.0/Scalar.AspNetCore.dll",
         "lib/net9.0/Scalar.AspNetCore.xml",
-        "scalar.aspnetcore.2.1.1.nupkg.sha512",
+        "scalar.aspnetcore.2.1.2.nupkg.sha512",
         "scalar.aspnetcore.nuspec"
       ]
     },
@@ -2909,7 +2909,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 9.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.3",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.4",
-      "Scalar.AspNetCore >= 2.1.1"
+      "Scalar.AspNetCore >= 2.1.2"
     ]
   },
   "packageFolders": {
@@ -2989,7 +2989,7 @@
           },
           "Scalar.AspNetCore": {
             "target": "Package",
-            "version": "[2.1.1, )"
+            "version": "[2.1.2, )"
           }
         },
         "imports": [
