@@ -11,7 +11,7 @@ namespace WebApiContaBancaria.Utils {
                 return new ValidationResult("O documento do tipo base64 é obrigatório");
             }
 
-            if (!base64.StartsWith("data:image/") || !base64.Contains(";base64,")) {
+            if (!base64.StartsWith("data:image/") && !base64.Contains(";base64,")) {
                 return new ValidationResult("Imagem não é do tipo base64");
             }
 

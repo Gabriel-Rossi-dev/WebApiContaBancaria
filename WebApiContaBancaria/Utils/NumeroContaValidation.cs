@@ -9,13 +9,17 @@ namespace WebApiContaBancaria.Utils {
             var numeroConta = value as string;
 
             if (string.IsNullOrEmpty(numeroConta)){
-                return new ValidationResult("O NumeroConta é obrigatório");
+                return new ValidationResult("O Conta é obrigatório");
+            }
+
+            if (!Regex.IsMatch(numeroConta, @"^\d+$")) {
+                return new ValidationResult("A Conta deve conter somente números");
             }
 
             numeroConta = Regex.Replace(numeroConta, @"[^\d]", "");
 
             if (numeroConta.Length < 6 && numeroConta.Length > 12 ) {
-                return new ValidationResult("o NumeroConta deve conter entre 6 e 12 digitos");
+                return new ValidationResult("o Conta deve conter entre 6 e 12 digitos");
             }
 
             return ValidationResult.Success;

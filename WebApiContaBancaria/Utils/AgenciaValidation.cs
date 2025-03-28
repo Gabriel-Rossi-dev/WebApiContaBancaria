@@ -12,6 +12,10 @@ namespace WebApiContaBancaria.Utils {
                 return new ValidationResult("A Agencia é obrigatória");
             }
 
+            if (!Regex.IsMatch(agencia, @"^\d+$")) {
+                return new ValidationResult("A Agencia deve conter somente números");
+            }
+
             agencia = Regex.Replace(agencia, @"[^\d]", "");
 
             if (agencia.Length != 4) {
