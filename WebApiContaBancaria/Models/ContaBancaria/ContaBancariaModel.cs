@@ -7,7 +7,6 @@ namespace WebApiContaBancaria.Models.ContaBancariaModel {
 
         public string Nome { get; set; } = string.Empty;
 
-        [Key]
         public string Cnpj { get; set; } = string.Empty;
 
         public int NumeroConta { get; set; }
