@@ -9,7 +9,7 @@ namespace WebApiContaBancaria.Models.ContaBancariaModel {
 
         public string Cnpj { get; set; } = string.Empty;
 
-        public int NumeroConta { get; set; }
+        public string NumeroConta { get; set; }
 
         public string Agencia { get; set; } = string.Empty;
 
@@ -19,7 +19,7 @@ namespace WebApiContaBancaria.Models.ContaBancariaModel {
 
         public bool Ativo { get; set; }
 
-        public ContaBancariaModel(string nome, string cnpj, int numeroConta, string agencia, string banco, string imageBase64) {
+        public ContaBancariaModel(string nome, string cnpj, string numeroConta, string agencia, string banco, string imageBase64) {
             Nome = nome;
             Cnpj = cnpj;
             NumeroConta = numeroConta;

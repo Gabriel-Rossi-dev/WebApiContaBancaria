@@ -82,13 +82,6 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
         public async Task<ResponseModel<ContaBancariaResponse>> CriarContaBancaria(ContaBancariaCreateRequest contaBancariaCreateRequest) {
 
 
-            //aqui 
-            //preciso consumir a api https://developers.receitaws.com.br/#/operations/queryCNPJFree
-            //Para consumir a API é utilizado um CNPJ Válido sem caracteres especiais: exemplo 44609664000209
-            //precisa ser feito a tratativa de conseguir dar 3 requests por minuto.
-            // as informações dessa api serão passadas diretamente para a ContaBancariaModel
-            // vou precisar das informações de Nome, CNPJ
-            // numeroConta, Banco e ImageBase64 o front envia.
 
             //O CNPJ será um registro UNICO, não podendo ser repetido.
 
