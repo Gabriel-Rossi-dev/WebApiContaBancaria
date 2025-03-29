@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using WebApiContaBancaria.Utils;
 
 namespace WebApiContaBancaria.Request.ContaBancaria {
     public class ContaBancariaUpdateRequest {
 
-        [Required(ErrorMessage = "O campo NumeroConta é obrigatório")]
-        public int NumeroConta { get; set; } = 0;
+        [NumeroConta]
+        public string NumeroConta { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "O campo Agencia é obrigatório")]
+        [Agencia]
         public string Agencia { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "O campo Banco é obrigatório")]

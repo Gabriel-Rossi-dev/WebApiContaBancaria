@@ -4,9 +4,9 @@ using WebApiContaBancaria.Request.ContaBancaria;
 namespace WebApiContaBancaria.Converters.ContaBancaria {
     public class ContaCreateRequestToContaModel {
 
-        public ContaBancariaModel Convert(ContaBancariaCreateRequest contaBancariaCreateRequest) {
+        public ContaBancariaModel Convert(ContaBancariaCreateRequest contaBancariaCreateRequest, string nome) {
             return new ContaBancariaModel(
-                contaBancariaCreateRequest.Nome,
+                nome,
                 contaBancariaCreateRequest.Cnpj,
                 contaBancariaCreateRequest.NumeroConta,
                 contaBancariaCreateRequest.Agencia,

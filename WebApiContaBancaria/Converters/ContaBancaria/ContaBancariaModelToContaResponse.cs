@@ -7,6 +7,7 @@ namespace WebApiContaBancaria.Converters.ContaBancaria {
 
         public ContaBancariaResponse Convert(ContaBancariaModel contaBancariaModel) {
             return new ContaBancariaResponse(
+                contaBancariaModel.Id,
                 contaBancariaModel.Nome,
                 contaBancariaModel.Cnpj,
                 contaBancariaModel.NumeroConta,

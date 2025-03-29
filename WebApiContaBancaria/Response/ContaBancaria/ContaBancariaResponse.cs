@@ -1,10 +1,13 @@
 ﻿namespace WebApiContaBancaria.Response.ContaBancaria {
     public class ContaBancariaResponse {
+
+        public int Id { get; set; }
+
         public string Nome { get; set; } = string.Empty;
 
         public string Cnpj { get; set; } = string.Empty;
 
-        public int NumeroConta { get; set; } = 0;
+        public string NumeroConta { get; set; } = string.Empty;
 
         public string Agencia { get; set; } = string.Empty;
 
@@ -13,7 +16,8 @@
         // Para Base64
         public string ImageBase64 { get; set; }
 
-        public ContaBancariaResponse(string nome, string cnpj, int numeroConta, string agencia, string banco, string imagemBase64) {
+        public ContaBancariaResponse(int id, string nome, string cnpj, string numeroConta, string agencia, string banco, string imagemBase64) {
+            Id = id;
             Nome = nome;
             Cnpj = cnpj;
             NumeroConta = numeroConta;
