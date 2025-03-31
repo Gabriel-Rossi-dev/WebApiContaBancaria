@@ -16,51 +16,52 @@ Este documento tem como objetivo explicar em detalhes o desenvolvimento do desaf
 
 ## Instalação e Como Rodar
 
-1. Clone o RepositórioPara obter o projeto localmente, execute o seguinte comando:
-``` console
-git clone https://github.com/Gabriel-Rossi-dev/WebApiContaBancaria.git
-```
+1. Clone o Repositório para obter o projeto localmente, execute o seguinte comando:
+    ``` console
+    git clone https://github.com/Gabriel-Rossi-dev/WebApiContaBancaria.git
+    ```
 
-2. Abra o terminal na pasta do projeto clonado e execute o seguinte comando para criação da base de dados e suas tabelas:
+2. Instale o Dotnet 9.0.3 no link abaixo.
+    - https://dotnet.microsoft.com/pt-br/download
+
+
+3. Instale os pacotes necessários para o funcionamento da api executando os seguintes comandos em ordem:
+    Abra o terminal na pasta do projeto clonado e execute os comandos abaixo. 
+  
+    - ``` console
+        dotnet add package Microsoft.EntityFrameworkCore --version 9.0.3
+      ```
+  
+    - ``` console 
+        dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 9.0.4
+      ``` 
+      
+    - ``` console 
+        dotnet add package Scalar.AspNetCore --version 2.1.3
+      ``` 
+
+
+4. Instale o Banco de Dados PostgreSql na sua maquina na versão 17.4, link abaixo:
+    - Antes de instalar é preciso ficar atento ao Username e ao Password, porque eles serão necessários para configurar o arquivo de conexão com o banco.
+    - [PostgreSql 17.4 WINDOWNS](https://sbp.enterprisedb.com/getfile.jsp?fileid=1259402)
+      
+
+
+5. Abra o arquivo appSettings.json e altere as informações de DefaultConnetion de acordo com as credencias do seu PostegreSQL instalado.
+ 
+   - Se necessário altere o Host.
+   - Altere o Username de acordo com o username do seu postgre informado no ato de instalação.
+   - Altere o Password de acordo com o password do seu postgre informado no ato de instalação.
+     
+   Exemplo de connectionStrings:
+     - Host=localhost;Username=postgres;Password=123;Database=WebApiContaBancaria
+       
+   Onde está 'Username=postgres' você irá trocar o 'postgres' para o Username que foi definido na instalação do banco de dados Postgre.
+   Onde está 'Password=123' você irá trocar o '123' para o Password que foi definido na instalação do banco de dados Postgre.
+
+
+
+6. Execute o seguinte comando para criação da base de dados e suas tabelas:
 ``` console
   dotnet ef database update
 ```
-
-3. Abra o arquivo appSettings.json e altere as informações de DefaultConnetion de acordo com as credencias do seu PostegreSQL instalado.
- 
- - Se necessário altere o Host.
- - Altere o Username de acordo com o username do seu postgre informado no ato de instalação.
- - Altere o Password de acordo com o password do seu postgre informado no ato de instalação.
-
-
-
-## Orientações
-
-- Recursos:
-  - Conta bancária (CRUD).
-  - Saque.
-  - Depósito.
-  - Transações (Uma conta para outra).
-  - Retornar saldo e extrato.
-
-- Sugestão de tabelas:
-  - **Conta**: Campos: (id, nome, CNPJ, número da conta, agência e imagem do documento)
-  - **Transações**: Campos: (id, valor, tipo, conta_id)
-
-## Informações Adicionais
-
-- Utilizar padrão REST, Postgres ou MySQL, e efetuar todas as validações necessárias.
-- Ao realizar a abertura da conta, o nome da empresa não vai poder ser informado na model, deve ser obtido através da API pelo CNPJ informado. [ReceitaWS API](https://developers.receitaws.com.br/#/operations/queryCNPJFree) (Atenção ao limite, tem um nível gratuito, tratar erros).
-- O documento da conta pode ser uma foto aleatória, fica a critério a forma de envio (Base64 ou MultipartFormData) salvar fisicamente em um diretório.
-
-## O que será Avaliado
-
-- Implementação dos recursos solicitados.
-- Validações e tratamento de erros.
-- Organização do código e estrutura do projeto.
-- Uso adequado das tecnologias mencionadas (REST, banco de dados, .Net 5+).
-- Clareza e qualidade do código.
-- Uso de boas práticas de desenvolvimento.
-- Documentação do projeto.
-
-Qualquer dúvida pode ser enviada para o e-mail: marcos.rezende@inovamobil.com.br
