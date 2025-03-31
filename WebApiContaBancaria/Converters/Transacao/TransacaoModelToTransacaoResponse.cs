@@ -10,7 +10,7 @@ namespace WebApiContaBancaria.Converters.Transacao {
                 transacaoModel.IdContaDestino,
                 transacaoModel.Valor,
                 transacaoModel.Tipo,
-                transacaoModel.Data
+                transacaoModel.Data - TimeSpan.FromHours(3)
             );
         }
     }
