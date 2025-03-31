@@ -64,7 +64,7 @@
               "RelativeDocumentMoniker": "WebApiContaBancaria\\Utils\\Transacoes\\ValorValidation.cs",
               "ToolTip": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Utils\\Transacoes\\ValorValidation.cs",
               "RelativeToolTip": "WebApiContaBancaria\\Utils\\Transacoes\\ValorValidation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-31T03:58:49.636Z",
               "EditorCaption": ""
@@ -79,8 +79,7 @@
               "RelativeToolTip": "WebApiContaBancaria\\Utils\\ContaBancaria\\NumeroContaValidation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T03:58:47.294Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T03:58:47.294Z"
             },
             {
               "$type": "Document",
@@ -92,8 +91,7 @@
               "RelativeToolTip": "WebApiContaBancaria\\Utils\\ContaBancaria\\CnpjValidation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T03:58:45.571Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T03:58:45.571Z"
             },
             {
               "$type": "Document",
@@ -105,8 +103,7 @@
               "RelativeToolTip": "WebApiContaBancaria\\Utils\\ContaBancaria\\Base64Validation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T03:58:44.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T03:58:44.364Z"
             },
             {
               "$type": "Document",
@@ -118,8 +115,7 @@
               "RelativeToolTip": "WebApiContaBancaria\\Utils\\ContaBancaria\\AgenciaValidation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T03:56:56.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T03:56:56.921Z"
             },
             {
               "$type": "Document",
@@ -131,8 +127,7 @@
               "RelativeToolTip": "WebApiContaBancaria\\Controllers\\TranscoesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T03:04:54.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T03:04:54.273Z"
             },
             {
               "$type": "Document",
@@ -144,8 +139,7 @@
               "RelativeToolTip": "WebApiContaBancaria\\Controllers\\ContaBancariaController.cs",
               "ViewState": "AgIAADUAAAAAAAAAAAAwwBcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T03:04:13.56Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T03:04:13.56Z"
             },
             {
               "$type": "Document",
@@ -157,8 +151,7 @@
               "RelativeToolTip": "WebApiContaBancaria\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T02:34:56.293Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T02:34:56.293Z"
             }
           ]
         }

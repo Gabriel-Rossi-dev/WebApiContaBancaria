@@ -14,7 +14,6 @@ namespace WebApiContaBancaria.Utils.Transacoes {
                 return new ValidationResult("O Valor deve ser maior que zero");
             }
 
-
             return ValidationResult.Success;
         }
     }
