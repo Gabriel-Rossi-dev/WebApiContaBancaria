@@ -20,7 +20,7 @@ Este documento tem como objetivo explicar em detalhes o desenvolvimento do desaf
 ``` console
 git clone https://github.com/Gabriel-Rossi-dev/WebApiContaBancaria.git
 ```
-2. Abra o terminal na pasta do projeto clonado e execute o seguinte comando para criação da base de dados com suas tabelas:
+2. Abra o terminal na pasta do projeto clonado e execute o seguinte comando para criação da base de dados e suas tabelas:
 ``` console
   dotnet ef database update
 ```
