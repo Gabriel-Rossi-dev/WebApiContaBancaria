@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
@@ -7,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace WebApiContaBancaria.Migrations
 {
     /// <inheritdoc />
-    public partial class createdabase : Migration
+    public partial class createdatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -20,7 +19,7 @@ namespace WebApiContaBancaria.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Nome = table.Column<string>(type: "text", nullable: false),
                     Cnpj = table.Column<string>(type: "text", nullable: false),
-                    NumeroConta = table.Column<int>(type: "integer", nullable: false),
+                    NumeroConta = table.Column<string>(type: "text", nullable: false),
                     Agencia = table.Column<string>(type: "text", nullable: false),
                     Banco = table.Column<string>(type: "text", nullable: false),
                     ImageBase64 = table.Column<string>(type: "text", nullable: false),

@@ -12,8 +12,8 @@ using WebApiContaBancaria.Data;
 namespace WebApiContaBancaria.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250327011122_createdabase")]
-    partial class createdabase
+    [Migration("20250329033512_createdatabase")]
+    partial class createdatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,8 +56,9 @@ namespace WebApiContaBancaria.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("NumeroConta")
-                        .HasColumnType("integer");
+                    b.Property<string>("NumeroConta")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 

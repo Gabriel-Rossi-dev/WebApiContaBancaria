@@ -22,8 +22,18 @@
           "text/json"
         ],
         "StatusCode": 200
+      },
+      {
+        "Type": "WebApiContaBancaria.Models.Response.ResponseModel\u00601[[WebApiContaBancaria.Response.ContaBancaria.ContaBancariaResponse, WebApiContaBancaria, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
       }
-    ]
+    ],
+    "Description": "M\u00E9todo para apagar uma conta banc\u00E1ria com base no ID fornecido no Path."
   },
   {
     "ContainingType": "WebApiContaBancaria.Controllers.ContaBancariaController",
@@ -53,8 +63,18 @@
           "text/json"
         ],
         "StatusCode": 200
+      },
+      {
+        "Type": "WebApiContaBancaria.Models.Response.ResponseModel\u00601[[WebApiContaBancaria.Response.ContaBancaria.ContaBancariaResponse, WebApiContaBancaria, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
       }
-    ]
+    ],
+    "Description": "M\u00E9todo para atualiza uma conta banc\u00E1ria existente com base no ID fornecido no Path e nos dados fornecidos no Body da requisi\u00E7\u00E3o."
   },
   {
     "ContainingType": "WebApiContaBancaria.Controllers.ContaBancariaController",
@@ -73,8 +93,18 @@
           "text/json"
         ],
         "StatusCode": 200
+      },
+      {
+        "Type": "WebApiContaBancaria.Models.Response.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[WebApiContaBancaria.Response.ContaBancaria.ContaBancariaResponse, WebApiContaBancaria, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
       }
-    ]
+    ],
+    "Description": "M\u00E9todo para recuperar todas as contas banc\u00E1rias cadastradas no sistema."
   },
   {
     "ContainingType": "WebApiContaBancaria.Controllers.ContaBancariaController",
@@ -99,8 +129,18 @@
           "text/json"
         ],
         "StatusCode": 200
+      },
+      {
+        "Type": "WebApiContaBancaria.Models.Response.ResponseModel\u00601[[WebApiContaBancaria.Response.ContaBancaria.ContaBancariaResponse, WebApiContaBancaria, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
       }
-    ]
+    ],
+    "Description": "M\u00E9todo para recuperar uma conta banc\u00E1ria espec\u00EDfica com base no ID fornecido no Path."
   },
   {
     "ContainingType": "WebApiContaBancaria.Controllers.ContaBancariaController",
@@ -124,9 +164,19 @@
           "application/json",
           "text/json"
         ],
-        "StatusCode": 200
+        "StatusCode": 201
+      },
+      {
+        "Type": "WebApiContaBancaria.Models.Response.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[WebApiContaBancaria.Response.ContaBancaria.ContaBancariaResponse, WebApiContaBancaria, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
       }
-    ]
+    ],
+    "Description": "M\u00E9todo para cria uma nova conta banc\u00E1ria com base nos dados fornecidos."
   },
   {
     "ContainingType": "WebApiContaBancaria.Controllers.TranscoesController",
@@ -155,9 +205,19 @@
           "application/json",
           "text/json"
         ],
-        "StatusCode": 200
+        "StatusCode": 201
+      },
+      {
+        "Type": "WebApiContaBancaria.Response.Transacoes.TransacaoResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
       }
-    ]
+    ],
+    "Description": "M\u00E9todo para depositar um valor na conta banc\u00E1ria especificada pelo ID no Path."
   },
   {
     "ContainingType": "WebApiContaBancaria.Controllers.TranscoesController",
@@ -182,8 +242,18 @@
           "text/json"
         ],
         "StatusCode": 200
+      },
+      {
+        "Type": "WebApiContaBancaria.Response.Transacoes.ExtratoResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
       }
-    ]
+    ],
+    "Description": "M\u00E9todo para recuperar o saldo e um extrato de todas as movimenta\u00E7\u00F5es da conta banc\u00E1ria especificada pelo ID no Path."
   },
   {
     "ContainingType": "WebApiContaBancaria.Controllers.TranscoesController",
@@ -212,9 +282,19 @@
           "application/json",
           "text/json"
         ],
-        "StatusCode": 200
+        "StatusCode": 201
+      },
+      {
+        "Type": "WebApiContaBancaria.Response.Transacoes.TransacaoResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
       }
-    ]
+    ],
+    "Description": "M\u00E9todo para sacar um valor na conta banc\u00E1ria especificada pelo ID no Path."
   },
   {
     "ContainingType": "WebApiContaBancaria.Controllers.TranscoesController",
@@ -243,8 +323,18 @@
           "application/json",
           "text/json"
         ],
-        "StatusCode": 200
+        "StatusCode": 201
+      },
+      {
+        "Type": "WebApiContaBancaria.Response.Transacoes.TransacaoResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
       }
-    ]
+    ],
+    "Description": "M\u00E9todo para transferir um valor da conta banc\u00E1ria especificada pelo ID no Path para a conta banc\u00E1ria especificada no Body da requisi\u00E7\u00E3o."
   }
 ]

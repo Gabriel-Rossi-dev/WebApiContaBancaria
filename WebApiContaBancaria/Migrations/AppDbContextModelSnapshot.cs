@@ -2,8 +2,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using WebApiContaBancaria.Data;
 
 #nullable disable
@@ -53,8 +51,9 @@ namespace WebApiContaBancaria.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("NumeroConta")
-                        .HasColumnType("integer");
+                    b.Property<string>("NumeroConta")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
