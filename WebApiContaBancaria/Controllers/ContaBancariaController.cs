@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Conventions;
-using WebApiContaBancaria.Models.ContaBancariaModel;
+﻿using Microsoft.AspNetCore.Mvc;
 using WebApiContaBancaria.Models.Response;
 using WebApiContaBancaria.Request.ContaBancaria;
 using WebApiContaBancaria.Response.ContaBancaria;
@@ -27,46 +24,80 @@ namespace WebApiContaBancaria.Controllers {
         }
 
         [HttpGet("contas")]
+        [ProducesResponseType(typeof(ResponseModel<List<ContaBancariaResponse>>), 200)]
+        [ProducesResponseType(typeof(ResponseModel<List<ContaBancariaResponse>>), 404)]
+        [EndpointDescription("Método para recuperar todas as contas bancárias cadastradas no sistema.")]
         public async Task<ActionResult<ResponseModel<List<ContaBancariaResponse>>>> GetContasBancarias() {
+
 
             var contasBancarias = await _contaBancariaInterface.GetContasBancarias();
 
+            if (contasBancarias.Status == false) {
+                return NotFound(contasBancarias);
+            }
             return Ok(contasBancarias);
 
         }
 
         [HttpGet]
         [Route("contas/{id}")]
+        [ProducesResponseType(typeof(ResponseModel<ContaBancariaResponse>), 200)]
+        [ProducesResponseType(typeof(ResponseModel<ContaBancariaResponse>), 404)]
+        [EndpointDescription("Método para recuperar uma conta bancária específica com base no ID fornecido no Path.")]
         public async Task<ActionResult<ResponseModel<ContaBancariaResponse>>> GetContaPorId(int id) {
 
             var contaBancaria = await _contaBancariaInterface.GetContaPorId(id);
+
+            if (contaBancaria.Status == false) {
+                return NotFound(contaBancaria);
+            }
             return Ok(contaBancaria);
 
         }
 
         [HttpPost]
         [Route("criarcontabancaria")]
+        [ProducesResponseType(typeof(ResponseModel<List<ContaBancariaResponse>>), 201)]
+        [ProducesResponseType(typeof(ResponseModel<List<ContaBancariaResponse>>), 400)]
+        [EndpointDescription("Método para cria uma nova conta bancária com base nos dados fornecidos.")]
         public async Task<ActionResult<ResponseModel<List<ContaBancariaResponse>>>> CriarContaBancaria(ContaBancariaCreateRequest contaBancariaCreateRequest) {
 
             var contaBancaria = await _contaBancariaInterface.CriarContaBancaria(contaBancariaCreateRequest);
-            return Ok(contaBancaria);
+
+            if (contaBancaria.Status == false) {
+                return BadRequest(contaBancaria);
+            }
+            return Created($"contas/{contaBancaria.Dados.Id}", contaBancaria);
 
         }
 
         [HttpPut]
         [Route("atualizarcontabancaria/{id}")]
+        [ProducesResponseType(typeof(ResponseModel<ContaBancariaResponse>), 200)]
+        [ProducesResponseType(typeof(ResponseModel<ContaBancariaResponse>), 404)]
+        [EndpointDescription("Método para atualiza uma conta bancária existente com base no ID fornecido no Path e nos dados fornecidos no Body da requisição.")]
         public async Task<ActionResult<ResponseModel<ContaBancariaResponse>>> AtualizarContaBancaria(ContaBancariaUpdateRequest contaBancariaUpdateRequest, int id) {
 
             var contaBancaria = await _contaBancariaInterface.AtualizarContaBancaria(contaBancariaUpdateRequest, id);
+
+            if (contaBancaria.Status == false) {
+                return NotFound(contaBancaria);
+            }
             return Ok(contaBancaria);
 
         }
 
         [HttpDelete]
         [Route("apagarcontabancaria/{id}")]
-        public async Task<ActionResult<ResponseModel<ContaBancariaResponse>>> ApagarContaBancaria( int id) {
+        [ProducesResponseType(typeof(ResponseModel<ContaBancariaResponse>), 200)]
+        [ProducesResponseType(typeof(ResponseModel<ContaBancariaResponse>), 404)]
+        [EndpointDescription("Método para apagar uma conta bancária com base no ID fornecido no Path.")]
+        public async Task<ActionResult<ResponseModel<ContaBancariaResponse>>> ApagarContaBancaria(int id) {
 
             var contaBancaria = await _contaBancariaInterface.ApagarContaBancaria(id);
+            if (contaBancaria.Status == false) {
+                return NotFound(contaBancaria);
+            }
             return Ok(contaBancaria);
         }
 
