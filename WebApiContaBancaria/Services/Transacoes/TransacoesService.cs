@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebApiContaBancaria.Converters.Transacao;
 using WebApiContaBancaria.Data;
 using WebApiContaBancaria.Models.Response;
@@ -24,6 +26,7 @@ namespace WebApiContaBancaria.Services.Transacoes {
                 var contaBancaria = await _context.ContasBancarias.Where(conta => conta.Ativo).FirstOrDefaultAsync(conta => conta.Id == id);
                 if (contaBancaria == null) {
                     resposta.Mensagem = "A conta informada não existe!";
+                    resposta.StatusCode = 404;
                     resposta.Status = false;
                     return resposta;
                 }
@@ -36,6 +39,7 @@ namespace WebApiContaBancaria.Services.Transacoes {
 
                 resposta.Dados = transacaoResponse;
                 resposta.Mensagem = "Depósito efetuado com sucesso!";
+                resposta.StatusCode = 201;
                 return resposta;
             }
             catch (Exception ex) {
@@ -54,12 +58,14 @@ namespace WebApiContaBancaria.Services.Transacoes {
                 var contaBancaria = await _context.ContasBancarias.Where(conta => conta.Ativo).FirstOrDefaultAsync(conta => conta.Id == id);
                 if (contaBancaria == null) {
                     resposta.Mensagem = "A conta informada não existe!";
+                    resposta.StatusCode = 404;
                     return resposta;
                 }
 
                 decimal saldo = await Saldo(id);
                 if (saldo < saqueRequest.Valor) {
                     resposta.Mensagem = $"Sem saldo suficiente. O valor máximo de saque é: {saldo}";
+                    resposta.StatusCode = 400;
                     return resposta;
                 }
 
@@ -71,6 +77,7 @@ namespace WebApiContaBancaria.Services.Transacoes {
 
                 resposta.Dados = transacaoResponse;
                 resposta.Mensagem = "Saque efetuado com sucesso!";
+                resposta.StatusCode = 201;
                 return resposta;
             }
             catch (Exception ex) {
@@ -90,18 +97,21 @@ namespace WebApiContaBancaria.Services.Transacoes {
                 var contaOrigem = await _context.ContasBancarias.Where(conta => conta.Ativo).FirstOrDefaultAsync(conta => conta.Id == id);
                 if (contaOrigem == null) {
                     resposta.Mensagem = "A conta de Origem não existe!";
+                    resposta.StatusCode = 404;
                     return resposta;
                 }
 
                 var contaDestino = await _context.ContasBancarias.Where(conta => conta.Ativo).FirstOrDefaultAsync(conta => conta.Id == transacoesTransferenciaModelDto.IdContaDestino);
                 if (contaDestino == null) {
                     resposta.Mensagem = "A conta de Destino não existe!";
+                    resposta.StatusCode = 404;
                     return resposta;
                 }
 
                 decimal saldoOrigem = await Saldo(id);
                 if (saldoOrigem < transacoesTransferenciaModelDto.Valor) {
                     resposta.Mensagem = $"Sem saldo suficiente. O valor máximo para transferencia é: {saldoOrigem}";
+                    resposta.StatusCode = 400;
                     return resposta;
                 }
 
@@ -113,6 +123,7 @@ namespace WebApiContaBancaria.Services.Transacoes {
 
                 resposta.Dados = transacaoResponse;
                 resposta.Mensagem = "Transferencia efetuada com sucesso!";
+                resposta.StatusCode = 201;
                 return resposta;
             }
             catch (Exception ex) {
@@ -136,12 +147,14 @@ namespace WebApiContaBancaria.Services.Transacoes {
                 var contaBancaria = await _context.ContasBancarias.Where(conta => conta.Ativo).FirstOrDefaultAsync(conta => conta.Id == id);
                 if (contaBancaria == null) {
                     resposta.Mensagem = "A conta informada não existe!";
+                    resposta.StatusCode = 404;
                     return resposta;
                 }
 
                 transacoesModel = await _context.Transacoes.Where(conta => conta.IdContaDestino == id || conta.IdContaOrigem == id).OrderBy(data => data.Data).ToListAsync();
                 if (transacoesModel.Count == 0) {
                     resposta.Mensagem = "Não existem movimentações para essa conta";
+                    resposta.StatusCode = 200;
                     resposta.Dados.Extrato = null;
                     return resposta;
                 }
@@ -150,6 +163,7 @@ namespace WebApiContaBancaria.Services.Transacoes {
                 decimal saldo = await Saldo(id);
                 resposta.Dados.Saldo = saldo;
                 resposta.Mensagem = "Extrato retornado com Sucesso";
+                resposta.StatusCode = 200;
 
                 return resposta;
 

@@ -16,46 +16,55 @@ namespace WebApiContaBancaria.Controllers {
         [HttpPost]
         [Route("deposito{id}")]
         [ProducesResponseType(typeof(TransacaoResponse), 201)]
-        [ProducesResponseType(typeof(TransacaoResponse), 400)]
+        [ProducesResponseType(typeof(TransacaoResponse), 404)]
         [EndpointDescription("Método para depositar um valor na conta bancária especificada pelo ID no Path.")]
         public async Task<ActionResult<TransacaoResponse>> Deposito(DepositoRequest depositoRequest, int id) {
 
             var transacao = await _transacoesInterface.Deposito(depositoRequest, id);
 
-            if (transacao.Status == false) {
-                return BadRequest(transacao);
+            if (transacao.StatusCode == 404) {
+                return NotFound(transacao);
             }
-            return Created($"contas/{id}", transacao);
+            else return Created($"transferencia/{id}", transacao);
         }
 
         [HttpPost]
         [Route("saque{id}")]
         [ProducesResponseType(typeof(TransacaoResponse), 201)]
         [ProducesResponseType(typeof(TransacaoResponse), 400)]
+        [ProducesResponseType(typeof(TransacaoResponse), 404)]
         [EndpointDescription("Método para sacar um valor na conta bancária especificada pelo ID no Path.")]
         public async Task<ActionResult<TransacaoResponse>> Saque(SaqueRequest saqueRequest, int id) {
 
             var transacao = await _transacoesInterface.Saque(saqueRequest, id);
 
-            if (transacao.Status == false) {
+            if (transacao.StatusCode == 400) {
                 return BadRequest(transacao);
             }
-            return Created($"contas/{id}", transacao);
+            else if (transacao.StatusCode == 404) {
+                return NotFound(transacao);
+            }
+            else return Created($"transferencia/{id}", transacao);
         }
 
         [HttpPost]
         [Route("transferencia{id}")]
         [ProducesResponseType(typeof(TransacaoResponse), 201)]
         [ProducesResponseType(typeof(TransacaoResponse), 400)]
+        [ProducesResponseType(typeof(TransacaoResponse), 404)]
         [EndpointDescription("Método para transferir um valor da conta bancária especificada pelo ID no Path para a conta bancária especificada no Body da requisição.")]
         public async Task<ActionResult<TransacaoResponse>> Tranferencia(TransferenciaRequest transacoesTransferenciaModelDto, int id) {
 
             var transacao = await _transacoesInterface.Transferencia(transacoesTransferenciaModelDto, id);
 
-            if (transacao.Status == false) {
+
+            if (transacao.StatusCode == 400) {
                 return BadRequest(transacao);
             }
-            return Created($"contas/{id}", transacao);
+            else if (transacao.StatusCode == 404) {
+                return NotFound(transacao);
+            }
+            else return Created($"transferencia/{id}", transacao);
         }
 
         [HttpGet]
@@ -67,11 +76,12 @@ namespace WebApiContaBancaria.Controllers {
 
             var transacoes = await _transacoesInterface.Extrato(id);
 
-            if (transacoes.Status == false) {
+            if (transacoes.StatusCode == 404) {
                 return NotFound(transacoes);
             }
-            return Ok(transacoes);
-
+            else return Ok(transacoes);
         }
+
     }
+
 }

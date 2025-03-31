@@ -32,10 +32,10 @@ namespace WebApiContaBancaria.Controllers {
 
             var contasBancarias = await _contaBancariaInterface.GetContasBancarias();
 
-            if (contasBancarias.Status == false) {
+            if (contasBancarias.StatusCode == 404) {
                 return NotFound(contasBancarias);
             }
-            return Ok(contasBancarias);
+            else return Ok(contasBancarias);
 
         }
 
@@ -48,10 +48,10 @@ namespace WebApiContaBancaria.Controllers {
 
             var contaBancaria = await _contaBancariaInterface.GetContaPorId(id);
 
-            if (contaBancaria.Status == false) {
+            if (contaBancaria.StatusCode == 404) {
                 return NotFound(contaBancaria);
             }
-            return Ok(contaBancaria);
+            else return Ok(contaBancaria);
 
         }
 
@@ -59,15 +59,23 @@ namespace WebApiContaBancaria.Controllers {
         [Route("criarcontabancaria")]
         [ProducesResponseType(typeof(ResponseModel<List<ContaBancariaResponse>>), 201)]
         [ProducesResponseType(typeof(ResponseModel<List<ContaBancariaResponse>>), 400)]
+        [ProducesResponseType(typeof(ResponseModel<List<ContaBancariaResponse>>), 502)]
         [EndpointDescription("Método para cria uma nova conta bancária com base nos dados fornecidos.")]
         public async Task<ActionResult<ResponseModel<List<ContaBancariaResponse>>>> CriarContaBancaria(ContaBancariaCreateRequest contaBancariaCreateRequest) {
 
             var contaBancaria = await _contaBancariaInterface.CriarContaBancaria(contaBancariaCreateRequest);
 
-            if (contaBancaria.Status == false) {
+            if (contaBancaria.StatusCode == 404) {
+                return NotFound(contaBancaria);
+            }
+            else if (contaBancaria.StatusCode == 400) {
                 return BadRequest(contaBancaria);
             }
-            return Created($"contas/{contaBancaria.Dados.Id}", contaBancaria);
+            else if (contaBancaria.StatusCode == 502) {
+                return StatusCode(502, contaBancaria);
+            }
+            else return Created($"contas/{contaBancaria.Dados.Id}", contaBancaria);
+           
 
         }
 
@@ -75,15 +83,19 @@ namespace WebApiContaBancaria.Controllers {
         [Route("atualizarcontabancaria/{id}")]
         [ProducesResponseType(typeof(ResponseModel<ContaBancariaResponse>), 200)]
         [ProducesResponseType(typeof(ResponseModel<ContaBancariaResponse>), 404)]
+        [ProducesResponseType(typeof(ResponseModel<ContaBancariaResponse>), 400)]
         [EndpointDescription("Método para atualiza uma conta bancária existente com base no ID fornecido no Path e nos dados fornecidos no Body da requisição.")]
         public async Task<ActionResult<ResponseModel<ContaBancariaResponse>>> AtualizarContaBancaria(ContaBancariaUpdateRequest contaBancariaUpdateRequest, int id) {
 
             var contaBancaria = await _contaBancariaInterface.AtualizarContaBancaria(contaBancariaUpdateRequest, id);
 
-            if (contaBancaria.Status == false) {
+            if (contaBancaria.StatusCode == 404) {
                 return NotFound(contaBancaria);
             }
-            return Ok(contaBancaria);
+            else if (contaBancaria.StatusCode == 400) {
+                return BadRequest(contaBancaria);
+            }
+            else return Ok(contaBancaria);
 
         }
 
@@ -95,10 +107,11 @@ namespace WebApiContaBancaria.Controllers {
         public async Task<ActionResult<ResponseModel<ContaBancariaResponse>>> ApagarContaBancaria(int id) {
 
             var contaBancaria = await _contaBancariaInterface.ApagarContaBancaria(id);
-            if (contaBancaria.Status == false) {
+
+            if (contaBancaria.StatusCode == 404) {
                 return NotFound(contaBancaria);
             }
-            return Ok(contaBancaria);
+            else return Ok(contaBancaria);
         }
 
     }

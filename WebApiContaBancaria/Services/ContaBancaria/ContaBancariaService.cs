@@ -34,6 +34,7 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
                 if (contas == null) {
 
                     resposta.Mensagem = "Nenhuma conta Localizada!";
+                    resposta.StatusCode = 404;
                     resposta.Status = false;
                     return resposta;
                 }
@@ -42,6 +43,7 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
 
                 resposta.Dados = contasResponse;
                 resposta.Mensagem = "Todos as Contas foram coletadas!";
+                resposta.StatusCode = 200;
                 return resposta;
             }
             catch (Exception ex) {
@@ -67,6 +69,7 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
 
                 if (conta == null) {
                     resposta.Mensagem = "Nenhuma conta Localizada!";
+                    resposta.StatusCode = 404;
                     resposta.Status = false;
                     return resposta;
                 }
@@ -75,6 +78,7 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
 
                 resposta.Mensagem = "Conta Localizada!";
                 resposta.Dados = contaResponse;
+                resposta.StatusCode = 200;
                 return resposta;
 
 
@@ -98,7 +102,8 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
                     contaBancariaModel.Cnpj == contaBancariaCreateRequest.Cnpj);
 
                 if (conta != null) {
-                    resposta.Mensagem = "CNPJ já cadastrado para esse banco";
+                    resposta.Mensagem = "CNPJ já cadastrado.";
+                    resposta.StatusCode = 400;
                     resposta.Status = false;
                     return resposta;
                 }
@@ -107,11 +112,11 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
                     contaBancariaModel.NumeroConta == contaBancariaCreateRequest.NumeroConta);
 
                 if (numeroConta != null) {
-                    resposta.Mensagem = "Ja existe esse numero de conta para outro CNPJ";
+                    resposta.Mensagem = "Numero de Conta ja cadastrado para outro CNPJ.";
+                    resposta.StatusCode = 400;
                     resposta.Status = false;
                     return resposta;
                 }
-
 
                 var request = new HttpRequestMessage(HttpMethod.Get, $"https://receitaws.com.br/v1/cnpj/{contaBancariaCreateRequest.Cnpj}");
                 var client = new HttpClient();
@@ -149,6 +154,7 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
 
                 if (!response.IsSuccessStatusCode) {
                     resposta.Mensagem = "Erro ao consultar API externa";
+                    resposta.StatusCode = 502;
                     resposta.Status = false;
                 };
 
@@ -158,6 +164,7 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
                 if (apiResult.status == "ERROR") {
                     resposta.Mensagem = apiResult.message;
                     resposta.Status = false;
+                    resposta.StatusCode = 400;
                     return resposta;
                 }
                 string nome = apiResult.nome;
@@ -171,6 +178,7 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
 
                 if (contas == null) {
                     resposta.Mensagem = "Não foi possível salvar a conta.";
+                    resposta.StatusCode = 400;
                     resposta.Status = false;
                     return resposta;
                 }
@@ -178,6 +186,7 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
                 var contasResponse = contabancariaModelToContaResponse.Convert(contas);
                 resposta.Dados = contasResponse;
                 resposta.Mensagem = "Conta salva com sucesso!";
+                resposta.StatusCode = 201;
                 return resposta;
             }
             catch (Exception ex) {
@@ -200,15 +209,18 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
                 if (conta == null) {
                     resposta.Mensagem = "Conta não encontrada!";
                     resposta.Status = false;
+                    resposta.StatusCode = 404;
                     return resposta;
 
                 }
 
                 var numeroConta = await _context.ContasBancarias.Where(contaBancariaModel => contaBancariaModel.Ativo).FirstOrDefaultAsync(contaBancariaModel =>
-                                        contaBancariaModel.NumeroConta == contaBancariaUpdateRequest.NumeroConta && contaBancariaModel.Id != id);
+                contaBancariaModel.NumeroConta == contaBancariaUpdateRequest.NumeroConta &&
+                contaBancariaModel.Id != id);
 
                 if (numeroConta != null) {
-                    resposta.Mensagem = "Ja existe esse numero de conta para outro CNPJ";
+                    resposta.Mensagem = "Numero de Conta ja cadastrado para outro CNPJ.";
+                    resposta.StatusCode = 400;
                     resposta.Status = false;
                     return resposta;
                 }
@@ -225,6 +237,7 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
 
                 if (contaAtualizada == null) {
                     resposta.Mensagem = "Não foi possível atulizar as informações.";
+                    resposta.StatusCode = 400;
                     resposta.Status = false;
                     return resposta;
                 }
@@ -233,6 +246,7 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
 
                 resposta.Dados = contaResponse;
                 resposta.Mensagem = "Conta atualizada com sucesso!";
+                resposta.StatusCode = 200;
                 return resposta;
 
             }
@@ -253,6 +267,7 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
 
                 if (conta == null) {
                     resposta.Mensagem = "Conta não encontrada!";
+                    resposta.StatusCode = 404;
                     resposta.Status = false;
                     return resposta;
                 }
@@ -261,6 +276,7 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
                 await _context.SaveChangesAsync();
 
                 resposta.Mensagem = "Conta apagada com sucesso!";
+                resposta.StatusCode = 200;
                 return resposta;
 
             }
