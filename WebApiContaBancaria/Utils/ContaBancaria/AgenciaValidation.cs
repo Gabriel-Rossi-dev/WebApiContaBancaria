@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 
-namespace WebApiContaBancaria.Utils {
+namespace WebApiContaBancaria.Utils.ContaBancaria {
     public class Agencia : ValidationAttribute {
 
         protected override ValidationResult IsValid(object value, ValidationContext validationContext) {
@@ -15,8 +15,6 @@ namespace WebApiContaBancaria.Utils {
             if (!Regex.IsMatch(agencia, @"^\d+$")) {
                 return new ValidationResult("A Agencia deve conter somente números");
             }
-
-            agencia = Regex.Replace(agencia, @"[^\d]", "");
 
             if (agencia.Length != 4) {
                 return new ValidationResult("A Agencia deve conter 4 digitos");

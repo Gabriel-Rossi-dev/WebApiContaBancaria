@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebApiContaBancaria.Utils {
+namespace WebApiContaBancaria.Utils.ContaBancaria {
     public class Base64 : ValidationAttribute {
 
         protected override ValidationResult? IsValid(object value, ValidationContext validationContext) {
-           
+
             var base64 = value as string;
 
             if (base64 == null) {
