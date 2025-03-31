@@ -1,16 +1,10 @@
-﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Connections.Features;
-using Microsoft.EntityFrameworkCore;
-using System.Runtime.CompilerServices;
+﻿using Microsoft.EntityFrameworkCore;
 using WebApiContaBancaria.Converters.Transacao;
 using WebApiContaBancaria.Data;
-using WebApiContaBancaria.Models.ContaBancariaModel;
 using WebApiContaBancaria.Models.Response;
 using WebApiContaBancaria.Models.Transacoes;
 using WebApiContaBancaria.Request.Transacoes;
-using WebApiContaBancaria.Response.ContaBancaria;
 using WebApiContaBancaria.Response.Transacoes;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace WebApiContaBancaria.Services.Transacoes {
     public class TransacoesService : ITransacoesInterface {
@@ -30,6 +24,7 @@ namespace WebApiContaBancaria.Services.Transacoes {
                 var contaBancaria = await _context.ContasBancarias.Where(conta => conta.Ativo).FirstOrDefaultAsync(conta => conta.Id == id);
                 if (contaBancaria == null) {
                     resposta.Mensagem = "A conta informada não existe!";
+                    resposta.Status = false;
                     return resposta;
                 }
 
@@ -106,7 +101,7 @@ namespace WebApiContaBancaria.Services.Transacoes {
 
                 decimal saldoOrigem = await Saldo(id);
                 if (saldoOrigem < transacoesTransferenciaModelDto.Valor) {
-                    resposta.Mensagem = $"Sem saldo suficiente. O valor máximo de saque é: {saldoOrigem}";
+                    resposta.Mensagem = $"Sem saldo suficiente. O valor máximo para transferencia é: {saldoOrigem}";
                     return resposta;
                 }
 
@@ -145,8 +140,7 @@ namespace WebApiContaBancaria.Services.Transacoes {
                 }
 
                 transacoesModel = await _context.Transacoes.Where(conta => conta.IdContaDestino == id || conta.IdContaOrigem == id).OrderBy(data => data.Data).ToListAsync();
-                if (transacoesModel == null) {
-                    //aqui
+                if (transacoesModel.Count == 0) {
                     resposta.Mensagem = "Não existem movimentações para essa conta";
                     resposta.Dados.Extrato = null;
                     return resposta;
