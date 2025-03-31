@@ -1,5 +1,4 @@
 ﻿using WebApiContaBancaria.Models.Response;
-using WebApiContaBancaria.Models.Transacoes;
 using WebApiContaBancaria.Request.Transacoes;
 using WebApiContaBancaria.Response.Transacoes;
 
