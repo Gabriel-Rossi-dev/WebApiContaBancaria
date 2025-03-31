@@ -17,10 +17,7 @@ namespace WebApiContaBancaria.Converters.ContaBancaria {
         private string SalvarImagemConta(string imageBase64) {
 
 
-            var mutablePath = "D:\\Development\\"; 
-            var imutablePath = "WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\src\\Imagens"; 
-
-            var filePath = mutablePath + imutablePath;
+            var filePath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName + "\\src\\Imagens";
 
             var fileExt = imageBase64.Substring(imageBase64.IndexOf("/") + 1,
                           imageBase64.IndexOf(";") - imageBase64.IndexOf("/") - 1);
