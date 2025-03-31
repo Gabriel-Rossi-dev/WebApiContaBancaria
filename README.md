@@ -20,10 +20,17 @@ Este documento tem como objetivo explicar em detalhes o desenvolvimento do desaf
 ``` console
 git clone https://github.com/Gabriel-Rossi-dev/WebApiContaBancaria.git
 ```
+
 2. Abra o terminal na pasta do projeto clonado e execute o seguinte comando para criação da base de dados e suas tabelas:
 ``` console
   dotnet ef database update
 ```
+
+3. Abra o arquivo appSettings.json e altere as informações de DefaultConnetion de acordo com as credencias do seu PostegreSQL instalado.
+ 
+ - Se necessário altere o Host.
+ - Altere o Username de acordo com o username do seu postgre informado no ato de instalação.
+ - Altere o Password de acordo com o password do seu postgre informado no ato de instalação.
 
 
 

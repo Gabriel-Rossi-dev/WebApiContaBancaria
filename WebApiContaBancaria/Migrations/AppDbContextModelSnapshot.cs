@@ -37,10 +37,6 @@ namespace WebApiContaBancaria.Migrations
                     b.Property<bool>("Ativo")
                         .HasColumnType("boolean");
 
-                    b.Property<string>("Banco")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<string>("Cnpj")
                         .IsRequired()
                         .HasColumnType("text");
