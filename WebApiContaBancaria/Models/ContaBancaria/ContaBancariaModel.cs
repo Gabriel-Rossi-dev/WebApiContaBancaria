@@ -13,19 +13,16 @@ namespace WebApiContaBancaria.Models.ContaBancariaModel {
 
         public string Agencia { get; set; } = string.Empty;
 
-        public string Banco { get; set; } = string.Empty;
-
-        public string ImageBase64  { get; set; }
+        public string Documento  { get; set; }
 
         public bool Ativo { get; set; }
 
-        public ContaBancariaModel(string nome, string cnpj, string numeroConta, string agencia, string banco, string imageBase64) {
+        public ContaBancariaModel(string nome, string cnpj, string numeroConta, string agencia, string documento) {
             Nome = nome;
             Cnpj = cnpj;
             NumeroConta = numeroConta;
             Agencia = agencia;
-            Banco = banco;
-            ImageBase64 = imageBase64;
+            Documento = documento;
             Ativo = true;
         }
     }

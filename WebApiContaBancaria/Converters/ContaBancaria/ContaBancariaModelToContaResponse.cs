@@ -12,8 +12,7 @@ namespace WebApiContaBancaria.Converters.ContaBancaria {
                 contaBancariaModel.Cnpj,
                 contaBancariaModel.NumeroConta,
                 contaBancariaModel.Agencia,
-                contaBancariaModel.Banco,
-                contaBancariaModel.ImageBase64
+                contaBancariaModel.Documento
             );
         }
 

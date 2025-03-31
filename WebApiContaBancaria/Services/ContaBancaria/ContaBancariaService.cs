@@ -95,8 +95,7 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
             try {
 
                 var conta = await _context.ContasBancarias.Where(contaBancariaModel => contaBancariaModel.Ativo).FirstOrDefaultAsync(contaBancariaModel =>
-                    contaBancariaModel.Cnpj == contaBancariaCreateRequest.Cnpj &&
-                    contaBancariaModel.Banco == contaBancariaCreateRequest.Banco);
+                    contaBancariaModel.Cnpj == contaBancariaCreateRequest.Cnpj);
 
                 if (conta != null) {
                     resposta.Mensagem = "CNPJ já cadastrado para esse banco";
@@ -215,8 +214,7 @@ namespace WebApiContaBancaria.Services.ContaBancaria {
                 }
 
                 conta.NumeroConta = contaBancariaUpdateRequest.NumeroConta;
-                conta.Agencia = contaBancariaUpdateRequest.Agencia;
-                conta.Banco = contaBancariaUpdateRequest.Banco;
+                conta.Agencia = contaBancariaUpdateRequest.Agencia;;
                 conta.Ativo = true;
 
                 _context.Update(conta);

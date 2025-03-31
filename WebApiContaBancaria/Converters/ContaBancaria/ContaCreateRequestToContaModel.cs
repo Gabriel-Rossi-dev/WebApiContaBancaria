@@ -10,14 +10,17 @@ namespace WebApiContaBancaria.Converters.ContaBancaria {
                 contaBancariaCreateRequest.Cnpj,
                 contaBancariaCreateRequest.NumeroConta,
                 contaBancariaCreateRequest.Agencia,
-                contaBancariaCreateRequest.Banco,
-                SalvarImagemConta(contaBancariaCreateRequest.ImageBase64)
+                SalvarImagemConta(contaBancariaCreateRequest.Documento)
             );
         }
 
         private string SalvarImagemConta(string imageBase64) {
 
-            var filePath = "D:\\Development\\ImagensConta";
+
+            var mutablePath = "D:\\Development\\"; 
+            var imutablePath = "WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\src\\Imagens"; 
+
+            var filePath = mutablePath + imutablePath;
 
             var fileExt = imageBase64.Substring(imageBase64.IndexOf("/") + 1,
                           imageBase64.IndexOf(";") - imageBase64.IndexOf("/") - 1);

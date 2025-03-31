@@ -17,12 +17,9 @@ namespace WebApiContaBancaria.Request.ContaBancaria {
         [Agencia]
         public string Agencia { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "O campo Banco é obrigatório")]
-        public string Banco { get; set; } = string.Empty;
-
         [Required]
         [Base64]
-        public string ImageBase64 { get; set; }
+        public string Documento { get; set; }
 
     }
 }
