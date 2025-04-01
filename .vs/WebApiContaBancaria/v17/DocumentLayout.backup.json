@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5D6CDBFB-0E7A-4538-A67F-E4BFC073F672}|WebApiContaBancaria\\WebApiContaBancaria.csproj|d:\\development\\webapicontabancaria\\webapicontabancaria\\webapicontabancaria\\controllers\\transcoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D6CDBFB-0E7A-4538-A67F-E4BFC073F672}|WebApiContaBancaria\\WebApiContaBancaria.csproj|solutionrelative:webapicontabancaria\\controllers\\transcoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D6CDBFB-0E7A-4538-A67F-E4BFC073F672}|WebApiContaBancaria\\WebApiContaBancaria.csproj|d:\\development\\webapicontabancaria\\webapicontabancaria\\webapicontabancaria\\controllers\\contabancariacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D6CDBFB-0E7A-4538-A67F-E4BFC073F672}|WebApiContaBancaria\\WebApiContaBancaria.csproj|solutionrelative:webapicontabancaria\\controllers\\contabancariacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1137,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +31,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TranscoesController.cs",
+              "DocumentMoniker": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Controllers\\TranscoesController.cs",
+              "RelativeDocumentMoniker": "WebApiContaBancaria\\Controllers\\TranscoesController.cs",
+              "ToolTip": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Controllers\\TranscoesController.cs",
+              "RelativeToolTip": "WebApiContaBancaria\\Controllers\\TranscoesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T02:05:27.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ContaBancariaController.cs",
+              "DocumentMoniker": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Controllers\\ContaBancariaController.cs",
+              "RelativeDocumentMoniker": "WebApiContaBancaria\\Controllers\\ContaBancariaController.cs",
+              "ToolTip": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Controllers\\ContaBancariaController.cs",
+              "RelativeToolTip": "WebApiContaBancaria\\Controllers\\ContaBancariaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T01:39:44.488Z",
+              "EditorCaption": ""
             }
           ]
         }

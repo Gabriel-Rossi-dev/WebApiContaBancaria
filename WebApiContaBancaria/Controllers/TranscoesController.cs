@@ -14,7 +14,7 @@ namespace WebApiContaBancaria.Controllers {
         }
 
         [HttpPost]
-        [Route("deposito{id}")]
+        [Route("deposito/{id}")]
         [ProducesResponseType(typeof(TransacaoResponse), 201)]
         [ProducesResponseType(typeof(TransacaoResponse), 404)]
         [EndpointDescription("Método para depositar um valor na conta bancária especificada pelo ID no Path.")]
@@ -29,7 +29,7 @@ namespace WebApiContaBancaria.Controllers {
         }
 
         [HttpPost]
-        [Route("saque{id}")]
+        [Route("saque/{id}")]
         [ProducesResponseType(typeof(TransacaoResponse), 201)]
         [ProducesResponseType(typeof(TransacaoResponse), 400)]
         [ProducesResponseType(typeof(TransacaoResponse), 404)]
@@ -48,7 +48,7 @@ namespace WebApiContaBancaria.Controllers {
         }
 
         [HttpPost]
-        [Route("transferencia{id}")]
+        [Route("transferencia/{id}")]
         [ProducesResponseType(typeof(TransacaoResponse), 201)]
         [ProducesResponseType(typeof(TransacaoResponse), 400)]
         [ProducesResponseType(typeof(TransacaoResponse), 404)]
@@ -68,7 +68,7 @@ namespace WebApiContaBancaria.Controllers {
         }
 
         [HttpGet]
-        [Route("extrato{id}")]
+        [Route("extrato/{id}")]
         [ProducesResponseType(typeof(ExtratoResponse), 200)]
         [ProducesResponseType(typeof(ExtratoResponse), 404)]
         [EndpointDescription("Método para recuperar o saldo e um extrato de todas as movimentações da conta bancária especificada pelo ID no Path.")]
