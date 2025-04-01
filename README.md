@@ -26,7 +26,9 @@ Este documento tem como objetivo explicar em detalhes o desenvolvimento do desaf
 
 
 3. Instale os pacotes necessários para o funcionamento da api executando os seguintes comandos em ordem:
-    Abra o terminal na pasta do projeto clonado e execute os comandos abaixo. 
+    Abra o terminal na pasta do projeto clonado e execute os comandos 
+    na pasta do projeto {sua pasta onde clonou o projeto}\WebApiContaBancaria\WebApiContaBancaria
+    abaixo. 
   
     - ``` console
         dotnet add package Microsoft.EntityFrameworkCore --version 9.0.3
@@ -141,3 +143,19 @@ Cada Modelo de Request(requisição) tem suas validações através de Data Nota
 
 A camada de dados gerencia as interações com o banco de dados.
 - Configura o mapeamento de entidades e o contexto do banco de dados.
+
+
+## Interface Tests 
+
+A camada de Interface Tests é responsável por garantir que as funcionalidades da camada controller estejam funcionando corretamente. 
+
+
+### Executando os Testes
+
+Para executar os testes, siga os passos abaixo:
+
+1. Abra o terminal na pasta do projeto de testes (WebApiContaBancariaTest).
+2. Execute o comando:
+``` console
+  dotnet test
+```
