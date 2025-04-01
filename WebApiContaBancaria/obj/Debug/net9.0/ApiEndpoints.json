@@ -199,7 +199,7 @@
   {
     "ContainingType": "WebApiContaBancaria.Controllers.TranscoesController",
     "Method": "Deposito",
-    "RelativePath": "api/Transcoes/deposito{id}",
+    "RelativePath": "api/Transcoes/deposito/{id}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -240,7 +240,7 @@
   {
     "ContainingType": "WebApiContaBancaria.Controllers.TranscoesController",
     "Method": "Extrato",
-    "RelativePath": "api/Transcoes/extrato{id}",
+    "RelativePath": "api/Transcoes/extrato/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -276,7 +276,7 @@
   {
     "ContainingType": "WebApiContaBancaria.Controllers.TranscoesController",
     "Method": "Saque",
-    "RelativePath": "api/Transcoes/saque{id}",
+    "RelativePath": "api/Transcoes/saque/{id}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -326,7 +326,7 @@
   {
     "ContainingType": "WebApiContaBancaria.Controllers.TranscoesController",
     "Method": "Tranferencia",
-    "RelativePath": "api/Transcoes/transferencia{id}",
+    "RelativePath": "api/Transcoes/transferencia/{id}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

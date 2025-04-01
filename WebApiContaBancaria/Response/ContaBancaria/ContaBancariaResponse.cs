@@ -11,7 +11,7 @@
 
         public string Agencia { get; set; } = string.Empty;
 
-        public ContaBancariaResponse(int id, string nome, string cnpj, string numeroConta, string agencia, string imagemBase64) {
+        public ContaBancariaResponse(int id, string nome, string cnpj, string numeroConta, string agencia) {
             Id = id;
             Nome = nome;
             Cnpj = cnpj;
