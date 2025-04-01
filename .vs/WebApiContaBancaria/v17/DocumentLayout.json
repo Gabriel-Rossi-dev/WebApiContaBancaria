@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5D6CDBFB-0E7A-4538-A67F-E4BFC073F672}|WebApiContaBancaria\\WebApiContaBancaria.csproj|d:\\development\\webapicontabancaria\\webapicontabancaria\\webapicontabancaria\\utils\\contabancaria\\numerocontavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D6CDBFB-0E7A-4538-A67F-E4BFC073F672}|WebApiContaBancaria\\WebApiContaBancaria.csproj|solutionrelative:webapicontabancaria\\utils\\contabancaria\\numerocontavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D6CDBFB-0E7A-4538-A67F-E4BFC073F672}|WebApiContaBancaria\\WebApiContaBancaria.csproj|d:\\development\\webapicontabancaria\\webapicontabancaria\\webapicontabancaria\\utils\\contabancaria\\agenciavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D6CDBFB-0E7A-4538-A67F-E4BFC073F672}|WebApiContaBancaria\\WebApiContaBancaria.csproj|solutionrelative:webapicontabancaria\\utils\\contabancaria\\agenciavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D6CDBFB-0E7A-4538-A67F-E4BFC073F672}|WebApiContaBancaria\\WebApiContaBancaria.csproj|d:\\development\\webapicontabancaria\\webapicontabancaria\\webapicontabancaria\\services\\contabancaria\\contabancariaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D6CDBFB-0E7A-4538-A67F-E4BFC073F672}|WebApiContaBancaria\\WebApiContaBancaria.csproj|solutionrelative:webapicontabancaria\\services\\contabancaria\\contabancariaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D6CDBFB-0E7A-4538-A67F-E4BFC073F672}|WebApiContaBancaria\\WebApiContaBancaria.csproj|d:\\development\\webapicontabancaria\\webapicontabancaria\\webapicontabancaria\\response\\transacoes\\extratoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D6CDBFB-0E7A-4538-A67F-E4BFC073F672}|WebApiContaBancaria\\WebApiContaBancaria.csproj|solutionrelative:webapicontabancaria\\response\\transacoes\\extratoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D6CDBFB-0E7A-4538-A67F-E4BFC073F672}|WebApiContaBancaria\\WebApiContaBancaria.csproj|d:\\development\\webapicontabancaria\\webapicontabancaria\\webapicontabancaria\\controllers\\transcoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D6CDBFB-0E7A-4538-A67F-E4BFC073F672}|WebApiContaBancaria\\WebApiContaBancaria.csproj|solutionrelative:webapicontabancaria\\controllers\\transcoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D6CDBFB-0E7A-4538-A67F-E4BFC073F672}|WebApiContaBancaria\\WebApiContaBancaria.csproj|d:\\development\\webapicontabancaria\\webapicontabancaria\\webapicontabancaria\\controllers\\contabancariacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D6CDBFB-0E7A-4538-A67F-E4BFC073F672}|WebApiContaBancaria\\WebApiContaBancaria.csproj|solutionrelative:webapicontabancaria\\controllers\\contabancariacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67CFF311-9A07-463B-9C6E-6B5A6140C87C}|WebApiContaBancariaTest\\WebApiContaBancaria.IntegrationTest.csproj|d:\\development\\webapicontabancaria\\webapicontabancaria\\webapicontabancariatest\\controllers\\contabancaria\\contabancariacontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67CFF311-9A07-463B-9C6E-6B5A6140C87C}|WebApiContaBancariaTest\\WebApiContaBancaria.IntegrationTest.csproj|solutionrelative:webapicontabancariatest\\controllers\\contabancaria\\contabancariacontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,35 +13,9 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 1137,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 1425,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NumeroContaValidation.cs",
-              "DocumentMoniker": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Utils\\ContaBancaria\\NumeroContaValidation.cs",
-              "RelativeDocumentMoniker": "WebApiContaBancaria\\Utils\\ContaBancaria\\NumeroContaValidation.cs",
-              "ToolTip": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Utils\\ContaBancaria\\NumeroContaValidation.cs",
-              "RelativeToolTip": "WebApiContaBancaria\\Utils\\ContaBancaria\\NumeroContaValidation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T02:40:15.514Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AgenciaValidation.cs",
-              "DocumentMoniker": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Utils\\ContaBancaria\\AgenciaValidation.cs",
-              "RelativeDocumentMoniker": "WebApiContaBancaria\\Utils\\ContaBancaria\\AgenciaValidation.cs",
-              "ToolTip": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Utils\\ContaBancaria\\AgenciaValidation.cs",
-              "RelativeToolTip": "WebApiContaBancaria\\Utils\\ContaBancaria\\AgenciaValidation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T02:36:25.805Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
@@ -76,54 +30,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ExtratoResponse.cs",
-              "DocumentMoniker": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Response\\Transacoes\\ExtratoResponse.cs",
-              "RelativeDocumentMoniker": "WebApiContaBancaria\\Response\\Transacoes\\ExtratoResponse.cs",
-              "ToolTip": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Response\\Transacoes\\ExtratoResponse.cs",
-              "RelativeToolTip": "WebApiContaBancaria\\Response\\Transacoes\\ExtratoResponse.cs",
+              "DocumentIndex": 0,
+              "Title": "ContaBancariaControllerTests.cs",
+              "DocumentMoniker": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancariaTest\\Controllers\\ContaBancaria\\ContaBancariaControllerTests.cs",
+              "RelativeDocumentMoniker": "WebApiContaBancariaTest\\Controllers\\ContaBancaria\\ContaBancariaControllerTests.cs",
+              "ToolTip": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancariaTest\\Controllers\\ContaBancaria\\ContaBancariaControllerTests.cs",
+              "RelativeToolTip": "WebApiContaBancariaTest\\Controllers\\ContaBancaria\\ContaBancariaControllerTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T02:14:12.324Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ContaBancariaService.cs",
-              "DocumentMoniker": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Services\\ContaBancaria\\ContaBancariaService.cs",
-              "RelativeDocumentMoniker": "WebApiContaBancaria\\Services\\ContaBancaria\\ContaBancariaService.cs",
-              "ToolTip": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Services\\ContaBancaria\\ContaBancariaService.cs",
-              "RelativeToolTip": "WebApiContaBancaria\\Services\\ContaBancaria\\ContaBancariaService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T02:06:14.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TranscoesController.cs",
-              "DocumentMoniker": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Controllers\\TranscoesController.cs",
-              "RelativeDocumentMoniker": "WebApiContaBancaria\\Controllers\\TranscoesController.cs",
-              "ToolTip": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Controllers\\TranscoesController.cs",
-              "RelativeToolTip": "WebApiContaBancaria\\Controllers\\TranscoesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T02:05:27.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ContaBancariaController.cs",
-              "DocumentMoniker": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Controllers\\ContaBancariaController.cs",
-              "RelativeDocumentMoniker": "WebApiContaBancaria\\Controllers\\ContaBancariaController.cs",
-              "ToolTip": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Controllers\\ContaBancariaController.cs",
-              "RelativeToolTip": "WebApiContaBancaria\\Controllers\\ContaBancariaController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T01:39:44.488Z",
+              "WhenOpened": "2025-04-01T21:14:48.43Z",
               "EditorCaption": ""
             }
           ]
