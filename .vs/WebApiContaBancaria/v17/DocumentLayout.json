@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{67CFF311-9A07-463B-9C6E-6B5A6140C87C}|WebApiContaBancariaTest\\WebApiContaBancaria.IntegrationTest.csproj|d:\\development\\webapicontabancaria\\webapicontabancaria\\webapicontabancariatest\\controllers\\contabancaria\\contabancariacontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67CFF311-9A07-463B-9C6E-6B5A6140C87C}|WebApiContaBancariaTest\\WebApiContaBancaria.IntegrationTest.csproj|solutionrelative:webapicontabancariatest\\controllers\\contabancaria\\contabancariacontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D6CDBFB-0E7A-4538-A67F-E4BFC073F672}|WebApiContaBancaria\\WebApiContaBancaria.csproj|d:\\development\\webapicontabancaria\\webapicontabancaria\\webapicontabancaria\\services\\transacoes\\transacoesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D6CDBFB-0E7A-4538-A67F-E4BFC073F672}|WebApiContaBancaria\\WebApiContaBancaria.csproj|solutionrelative:webapicontabancaria\\services\\transacoes\\transacoesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,14 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ContaBancariaControllerTests.cs",
-              "DocumentMoniker": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancariaTest\\Controllers\\ContaBancaria\\ContaBancariaControllerTests.cs",
-              "RelativeDocumentMoniker": "WebApiContaBancariaTest\\Controllers\\ContaBancaria\\ContaBancariaControllerTests.cs",
-              "ToolTip": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancariaTest\\Controllers\\ContaBancaria\\ContaBancariaControllerTests.cs",
-              "RelativeToolTip": "WebApiContaBancariaTest\\Controllers\\ContaBancaria\\ContaBancariaControllerTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "TransacoesService.cs",
+              "DocumentMoniker": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Services\\Transacoes\\TransacoesService.cs",
+              "RelativeDocumentMoniker": "WebApiContaBancaria\\Services\\Transacoes\\TransacoesService.cs",
+              "ToolTip": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria\\Services\\Transacoes\\TransacoesService.cs",
+              "RelativeToolTip": "WebApiContaBancaria\\Services\\Transacoes\\TransacoesService.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAwwGMAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T21:14:48.43Z",
+              "WhenOpened": "2025-04-01T21:38:22.88Z",
               "EditorCaption": ""
             }
           ]

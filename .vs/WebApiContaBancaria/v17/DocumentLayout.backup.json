@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria.UnitTest\\Service\\ContaBancaria\\ContaBancariaServiceTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebApiContaBancaria.UnitTest\\Service\\ContaBancaria\\ContaBancariaServiceTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67CFF311-9A07-463B-9C6E-6B5A6140C87C}|WebApiContaBancariaTest\\WebApiContaBancaria.IntegrationTest.csproj|d:\\development\\webapicontabancaria\\webapicontabancaria\\webapicontabancariatest\\controllers\\contabancaria\\contabancariacontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67CFF311-9A07-463B-9C6E-6B5A6140C87C}|WebApiContaBancariaTest\\WebApiContaBancaria.IntegrationTest.csproj|solutionrelative:webapicontabancariatest\\controllers\\contabancaria\\contabancariacontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,14 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ContaBancariaServiceTests.cs",
-              "DocumentMoniker": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria.UnitTest\\Service\\ContaBancaria\\ContaBancariaServiceTests.cs",
-              "RelativeDocumentMoniker": "WebApiContaBancaria.UnitTest\\Service\\ContaBancaria\\ContaBancariaServiceTests.cs",
-              "ToolTip": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancaria.UnitTest\\Service\\ContaBancaria\\ContaBancariaServiceTests.cs*",
-              "RelativeToolTip": "WebApiContaBancaria.UnitTest\\Service\\ContaBancaria\\ContaBancariaServiceTests.cs*",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
+              "Title": "ContaBancariaControllerTests.cs",
+              "DocumentMoniker": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancariaTest\\Controllers\\ContaBancaria\\ContaBancariaControllerTests.cs",
+              "RelativeDocumentMoniker": "WebApiContaBancariaTest\\Controllers\\ContaBancaria\\ContaBancariaControllerTests.cs",
+              "ToolTip": "D:\\Development\\WebApiContaBancaria\\WebApiContaBancaria\\WebApiContaBancariaTest\\Controllers\\ContaBancaria\\ContaBancariaControllerTests.cs",
+              "RelativeToolTip": "WebApiContaBancariaTest\\Controllers\\ContaBancaria\\ContaBancariaControllerTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T21:11:36.462Z",
+              "WhenOpened": "2025-04-01T21:14:48.43Z",
               "EditorCaption": ""
             }
           ]

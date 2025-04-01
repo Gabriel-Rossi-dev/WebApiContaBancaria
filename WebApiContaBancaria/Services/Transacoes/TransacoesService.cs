@@ -94,6 +94,14 @@ namespace WebApiContaBancaria.Services.Transacoes {
 
 
             try {
+
+                if (transacoesTransferenciaModelDto.IdContaDestino == id) {
+                    resposta.Mensagem = "A conta de Origem não pode ser a mesma que a conta de Destino!";
+                    resposta.Dados = null;
+                    resposta.StatusCode = 400;
+                    return resposta;
+                }
+
                 var contaOrigem = await _context.ContasBancarias.Where(conta => conta.Ativo).FirstOrDefaultAsync(conta => conta.Id == id);
                 if (contaOrigem == null) {
                     resposta.Mensagem = "A conta de Origem não existe!";
