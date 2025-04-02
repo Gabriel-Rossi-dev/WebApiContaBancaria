@@ -4,7 +4,7 @@
 ## Introdução
 
 
-Este documento tem como objetivo explicar em detalhes o desenvolvimento do desafio em .NET, abordando as tecnologias utilizadas, as funcionalidades implementadas e as regras de negócio aplicadas no desenvolvimento desta API. Através deste documento apresento uma visão abrangente do projeto, facilitando a compreensão do seu funcionamento e das decisões tomadas durante o processo de desenvolvimento.
+Este documento tem como objetivo explicar em detalhes o desenvolvimento do desafio em .NET, abordando as tecnologias utilizadas, as funcionalidades implementadas e as regras de negócio aplicadas no desenvolvimento desta API. 
 
 # Tecnologias Utilizadas
 
